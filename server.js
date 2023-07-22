@@ -1,7 +1,9 @@
 const express = require('express');
 
+const serverconfig = require('./configs/server.config');
+
 const app = express();
 
-app.listen(3330 , ()=>{
-    console.log("server started");
+app.listen(serverconfig.PORT , ()=>{
+    console.log(`server started on the port number ${serverconfig.PORT}` );
 })
